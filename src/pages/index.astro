@@ -1,110 +1,146 @@
 ---
-import Header from '../components/Header.astro';
+import Header from "../components/Header.astro";
 ---
 
+
 <style>
-	
-	@keyframes LeftToRight {
-	  from {
-		transform: translateX(-50%);
-	  }
-	  to {
-		transform: translateX(50%);
-	  }
-	}
+  @keyframes LeftToRight {
+    from {
+      transform: translateX(-50%);
+    }
+    to {
+      transform: translateX(50%);
+    }
+  }
 
+  .LeftToRight {
+    animation: LeftToRight 5s infinite linear;
+  }
+</style>
 
-	.LeftToRight {
-	  animation: LeftToRight 5s infinite linear;
-	}
-  </style>
-
-<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
-</head>
-<body class="font-dm-sans text-gray-800">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="font-dm-sans text-gray-800">
+    <Header />
 
-<Header></Header>
+    <main class="">
+      <section class="text-center py-80">
+        <h2 class="text-4xl font-bold">Portfolio</h2>
+        <p class="text-lg mt-2">2025</p>
+        <img
+          class="absolute bottom-80 right-32 w-96 scale-150 z-0"
+          src="/fonts/header-me.png"
+        />
+        <img
+          class="absolute top-80 right-0 scale-50"
+          src="/fonts/header-rodrigo.png"
+        />
 
-  <main class="">
-    
-    
-    
-    <section class="text-center py-16  ">
-      <h2 class="text-4xl font-bold">Portfolio</h2>
-      <p class="text-lg mt-2">2025</p>
-	  <img class="absolute top-28 right-32 w-80  scale-150 z-0" src="./public/fonts/header-me.png">
-    <img class="absolute top-28 right-0  scale-50 " src="./public/fonts/header-rodrigo.png">
-
-      <!-------------------------- NAV -->
-      <nav class="mt-8">
-        <ul class="flex flex-col gap-4 items-center">
-          <li>
-            <button class="w-64 inline-flex items-center justify-center p-0.5 mb-2 me-2 text-lg text-gray-900 rounded-full group bg-gradient-to-br from-orange to-pink hover:text-white dark:text-white">
-              <span class="w-64 px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-full group-hover:bg-opacity-0">
-                <a href="#about">A propos de moi</a>
-              </span>
+        <!-------------------------- NAV -->
+        <nav class="mt-8">
+          <ul class="flex flex-col gap-4 items-center">
+            <li>
+              <button
+                class="w-64 inline-flex items-center justify-center p-0.5 mb-2 me-2 text-lg text-gray-900 rounded-full group bg-gradient-to-br from-orange to-pink hover:text-white dark:text-white"
+              >
+                <span
+                  class="w-64 px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-full group-hover:bg-opacity-0"
+                >
+                  <a href="#about">A propos de moi</a>
+                </span>
               </button>
-          </li>
+            </li>
 
-          <li>
-            <button class="w-64  inline-flex items-center justify-center p-0.5 mb-2 me-2 text-lg text-gray-900 rounded-full group bg-gradient-to-br from-orange to-pink hover:text-white dark:text-white">
-              <span class="w-64  px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-full group-hover:bg-opacity-0">
-                <a href="#projects">Mes projets</a>
-              </span>
+            <li>
+              <button
+                class="w-64 inline-flex items-center justify-center p-0.5 mb-2 me-2 text-lg text-gray-900 rounded-full group bg-gradient-to-br from-orange to-pink hover:text-white dark:text-white"
+              >
+                <span
+                  class="w-64 px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-full group-hover:bg-opacity-0"
+                >
+                  <a href="#projects">Mes projets</a>
+                </span>
               </button>
-          </li>
+            </li>
 
-          <li>
-            <button class="w-64  inline-flex items-center justify-center p-0.5 mb-2 me-2 text-lg text-gray-900 rounded-full group bg-gradient-to-br from-orange to-pink hover:text-white dark:text-white">
-              <span class="w-64  px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-full group-hover:bg-opacity-0">
-                <a href="#contact">Contactez-moi!</a>
-              </span>
+            <li>
+              <button
+                class="w-64 inline-flex items-center justify-center p-0.5 mb-2 me-2 text-lg text-gray-900 rounded-full group bg-gradient-to-br from-orange to-pink hover:text-white dark:text-white"
+              >
+                <span
+                  class="w-64 px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-full group-hover:bg-opacity-0"
+                >
+                  <a href="#contact">Contactez-moi!</a>
+                </span>
               </button>
-          </li>
-        </ul>
-      </nav>
-    </section>
+            </li>
+          </ul>
+        </nav>
+      </section>
 
-    <!-- -------------------------- DEFILER -->
-    <section class="bg-gradient-to-br from-orange to-pink py-6 flex justify-center items-center ">
-      
-		<div class="whitespace-nowrap mx-8">
-      
-		  <div class="flex gap-8 LeftToRight mt-4">
-			<p class="text-5xl font-bold text-white ">Let's work together! Let’s work together!</p>
-		  </div>
-		</div>
-	  </div>
-    </section>
-
-	
+      <!-- -------------------------- DEFILER -->
+      <section
+        class="bg-gradient-to-br from-orange to-pink py-6 flex justify-center items-center"
+      >
+        <div class="whitespace-nowrap mx-8">
+          <div class="flex gap-8 LeftToRight mt-4">
+            <p class="text-5xl font-bold text-white">
+              Let's work together! Let’s work together!
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <!-- -------------------------- A PROPOS DE MOI -->
-    <section id="about" class="py-16">
-      <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-8">
+    <section id="about" class="py-80">
+      <div
+        class="max-w-4xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-8"
+      >
         <!-- Text -->
         <div class="md:w-1/2">
           <h2 class="text-3xl font-bold">Hello!</h2>
-          <p class="mt-4">Je m’appelle Aysha Braybrooke, j’ai 20ans et j’habite en France.</p>
-          <p class="mt-4 text-gray-600">Je suis dans ma 3ème année de BUT Métiers du Multimédia et de l'Internet à Limoges dans le parcours Création Numérique.</p>
-          <p class="mt-4 text-gray-600">Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
-          <a href="#" class="mt-4 inline-block text-blue-600 underline">téléchargez mon CV</a>
+          <p class="mt-4">
+            Je m’appelle Aysha Braybrooke, j’ai 20ans et j’habite en France.
+          </p>
+          <p class="mt-4 text-gray-600">
+            Je suis dans ma 3ème année de BUT Métiers du Multimédia et de
+            l'Internet à Limoges dans le parcours Création Numérique.
+          </p>
+          <p class="mt-4 text-gray-600">
+            Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+            Nulla consequat massa quis enim. Donec pede justo, fringilla vel,
+            aliquet nec, vulputate eget, arcu.
+          </p>
+          <a
+            href="/fonts/Aysha_Braybrooke_CV.pdf"
+            class="mt-4 inline-block underline bg-gradient-to-r from-orange to-pink text-transparent bg-clip-text">téléchargez mon CV</a
+          >
         </div>
-        
-        
+
         <div class="md:w-1/2 flex justify-center relative">
-          <div class="w-56 h-80 bg-gray-200 rounded-full flex items-center justify-center relative">
-            <span class="absolute top-4 left-4 bg-black text-white text-sm px-2 py-1 rounded">Ai</span>
-            <span class="absolute bottom-4 right-4 bg-black text-white text-sm px-2 py-1 rounded">Ps</span>
+          <div
+            class="w-56 h-80 scale-125 bg-gray-200 rounded-full flex items-center justify-center relative"
+          >
+            <span
+              class="absolute top-4 left-4 bg-black text-white text-sm px-2 py-1 rounded"
+              >Ai</span
+            >
+            <span
+              class="absolute bottom-4 right-4 bg-black text-white text-sm px-2 py-1 rounded"
+              >Ps</span
+            >
           </div>
         </div>
       </div>
@@ -113,40 +149,102 @@ import Header from '../components/Header.astro';
     <!-- -------------------------- PROJETS -->
     <section id="projects" class="py-16">
       <h2 class="text-3xl font-bold text-center mb-8">Mes Projets</h2>
+  
+      <!-- Project Buttons -->
       <div class="flex gap-4 justify-center flex-wrap">
-        <button class="border border-gray-400 rounded-full px-4 py-2">projet n5</button>
-        <button class="border border-gray-400 rounded-full px-4 py-2">projet n6</button>
-        <button class="border border-gray-400 rounded-full px-4 py-2">projet n7</button>
-        <button class="border border-gray-400 rounded-full px-4 py-2">projet n1</button>
-        <button class="border border-gray-400 rounded-full px-4 py-2">projet n2</button>
-        <button class="border border-gray-400 rounded-full px-4 py-2">projet n3</button>
-        <button class="border border-gray-400 rounded-full px-4 py-2">projet n4</button>
+        <button onclick="showProject(0)" class="project-btn border border-gray-400 rounded-full px-4 py-2">projet n5</button>
+        <button onclick="showProject(1)" class="project-btn border border-gray-400 rounded-full px-4 py-2">projet n6</button>
+        <button onclick="showProject(2)" class="project-btn border border-gray-400 rounded-full px-4 py-2">projet n7</button>
+        <button onclick="showProject(3)" class="project-btn border border-gray-400 rounded-full px-4 py-2">projet n1</button>
+        <button onclick="showProject(4)" class="project-btn border border-gray-400 rounded-full px-4 py-2">projet n2</button>
+        <button onclick="showProject(5)" class="project-btn border border-gray-400 rounded-full px-4 py-2">projet n3</button>
+        <button onclick="showProject(6)" class="project-btn border border-gray-400 rounded-full px-4 py-2">projet n4</button>
       </div>
-      <div class="mt-8 mx-auto max-w-4xl h-64 border border-gray-400"></div>
+  
+      <!-- Project Content Display Area -->
+      <div class="mt-8 mx-auto max-w-4xl h-64 border border-gray-400">
+        <div id="project-0" class="project-content p-4">
+          <p>Details of Projet n5: Description goes here.</p>
+        </div>
+        <div id="project-1" class="project-content hidden p-4">
+          <p>Details of Projet n6: Description goes here.</p>
+        </div>
+        <div id="project-2" class="project-content hidden p-4">
+          <p>Details of Projet n7: Description goes here.</p>
+        </div>
+        <div id="project-3" class="project-content hidden p-4">
+          <p>Details of Projet n1: Description goes here.</p>
+        </div>
+        <div id="project-4" class="project-content hidden p-4">
+          <p>Details of Projet n2: Description goes here.</p>
+        </div>
+        <div id="project-5" class="project-content hidden p-4">
+          <p>Details of Projet n3: Description goes here.</p>
+        </div>
+        <div id="project-6" class="project-content hidden p-4">
+          <p>Details of Projet n4: Description goes here.</p>
+        </div>
+      </div>
     </section>
 
     <!-- -------------------------- CONTACT -->
-    <section id="contact" class="py-16">
+    <section id="contact" class="py-28">
       <h2 class="text-3xl font-bold text-center mb-8">Contactez-moi!</h2>
-      <div class="flex flex-wrap gap-4 justify-center">
-        <div class="border border-gray-400 rounded-lg p-4 text-center">
-          <p>📧</p>
-          <p>aysha.braybr00ke@gmail.com</p>
+      <div class="flex flex-wrap gap-4 justify-center text-white">
+        <!-- Email Card -->
+        <div
+          class="h-52 w-64 rounded-lg p-4 text-center bg-gradient-to-br from-orange to-pink flex flex-col justify-between group transition-transform duration-300 ease-in-out hover:scale-105"
+        >
+          <img
+            src="/fonts/logo_mail.png"
+            class="w-8 transition-transform duration-300 ease-in-out group-hover:scale-150"
+          />
+          <p class="border-t-2 border-white pt-2">aysha.braybr00ke@gmail.com</p>
         </div>
-        <div class="border border-gray-400 rounded-lg p-4 text-center">
-          <p>LinkedIn</p>
-          <p>ayshabraybrooke</p>
-        </div>
-        <div class="border border-gray-400 rounded-lg p-4 text-center">
-          <p>Behance</p>
-          <p>ayshabraybrooke</p>
-        </div>
-        <div class="border border-gray-400 rounded-lg p-4 text-center">
-          <p>🎵</p>
-          <p>@beebpoup</p>
-        </div>
+      
+        <!-- LinkedIn Card -->
+        <a href="https://www.linkedin.com/in/aysha-braybrooke/" target="_blank">
+          <div
+            class="h-52 w-64 bg-gradient-to-br from-orange to-pink rounded-lg p-4 text-center flex flex-col justify-between group transition-transform duration-300 ease-in-out hover:scale-105"
+          >
+            <img
+              src="/fonts/logo_linkedin.png"
+              class="w-8 transition-transform duration-300 ease-in-out group-hover:scale-150"
+            />
+            <p class="border-t-2 border-white pt-2">ayshabraybrooke</p>
+          </div>
+        </a>
+      
+        <!-- Behance Card -->
+        <a href="https://www.behance.net/ayshabraybrooke" target="_blank">
+          <div
+            class="h-52 w-64 bg-gradient-to-br from-orange to-pink rounded-lg p-4 text-center flex flex-col justify-between group transition-transform duration-300 ease-in-out hover:scale-105"
+          >
+            <img
+              src="/fonts/logo_behance.png"
+              class="w-8 transition-transform duration-300 ease-in-out group-hover:scale-150"
+            />
+            <p class="border-t-2 border-white pt-2">ayshabraybrooke</p>
+          </div>
+        </a>
+      
+        <!-- TikTok Card -->
+        <a href="https://www.tiktok.com/@beebpoup" target="_blank">
+          <div
+            class="h-52 w-64 bg-gradient-to-br from-orange to-pink rounded-lg p-4 text-center flex flex-col justify-between group transition-transform duration-300 ease-in-out hover:scale-105"
+          >
+            <img
+              src="/fonts/logo_tiktok.png"
+              class="w-8 transition-transform duration-300 ease-in-out group-hover:scale-150"
+            />
+            <p class="border-t-2 border-white pt-2">@beebpoup</p>
+          </div>
+        </a>
       </div>
+      
     </section>
-  </main>
-</body>
+
+
+
+  </body>
 </html>
