@@ -360,26 +360,7 @@ import Header from "../components/Header.astro";
     </section>
 
     <script>
-      const carousel = document.getElementById(
-        "carousel"
-      ) as HTMLElement | null;
-      const dots = document.querySelectorAll(".dot");
-
-      if (carousel) {
-        dots.forEach((dot) => {
-          dot.addEventListener("click", () => {
-            const slideIndex = dot.getAttribute("data-slide");
-            if (slideIndex !== null) {
-              carousel.style.transform = `translateX(-${parseInt(slideIndex) * 100}%)`;
-
-              dots.forEach((d) => d.classList.remove("bg-gray-900"));
-              dot.classList.add("bg-gray-900");
-            }
-          });
-        });
-      } else {
-        console.error("Carousel element not found");
-      }
+      import "../script.js"
     </script>
   </body>
 </html>
