@@ -3,23 +3,24 @@ import Header from "../components/Header.astro";
 
 ---
 
-<style>
-  @keyframes LeftToRight {
-    from {
-      transform: translateX(-50%);
-    }
-    to {
-      transform: translateX(50%);
-    }
-  }
 
-  .LeftToRight {
-    animation: LeftToRight 5s infinite linear;
-  }
-</style>
 
-<html>
+<!DOCTYPE html>
   <head>
+    <style>
+      @keyframes LeftToRight {
+        from {
+          transform: translateX(-50%);
+        }
+        to {
+          transform: translateX(50%);
+        }
+      }
+    
+      .LeftToRight {
+        animation: LeftToRight 5s infinite linear;
+      }
+    </style>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
