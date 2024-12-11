@@ -4,7 +4,9 @@
 
 
 export default {
-	content: ["./src/**/*.{astro,html,js,jsx,ts,tsx}"],
+	content: [
+		"./src/**/*.{html,js,astro}",
+		"./public/**/*.{html,js}"],
 	theme: {
 		extend: {
 			
