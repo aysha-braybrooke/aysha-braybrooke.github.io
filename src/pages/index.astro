@@ -1,5 +1,6 @@
 ---
-// import Header from "../components/Header.astro";
+import Nav from "../components/Nav.astro";
+import Header from "../components/Header.astro"
 
 ---
 
@@ -28,344 +29,57 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
-      rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+    rel="stylesheet"
     />
   </head>
   <body class="font-dm-sans text-gray-800">
-    <header class="flex justify-between font-dm-sans text-gray-800 text-lg font-bold px-8">
-      <h1>Aysha Braybrooke</h1>
-      <p>Design Graphique • Illustratrice</p>
-    </header>
-
-    <main class="">
-      <section class="text-center py-60">
-        <h2 class="text-4xl font-bold">Portfolio</h2>
-        <p class="text-lg mt-2">2025</p>
-        <img
-          class="absolute bottom-40 right-32 w-96 scale-150 z-0"
-          src="/fonts/header-me.png"
-        />
-        <img
-          class="absolute top-80 -right-10 scale-75"
-          src="/fonts/header-rodrigo.png"
-        />
-
-        <!-------------------------- NAV -->
-        <nav class="mt-8">
-          <ul class="flex flex-col gap-4 items-center">
-            <li>
-              <button
-                class="w-64 inline-flex items-center justify-center p-0.5 mb-2 me-2 text-lg text-gray-900 rounded-full group bg-gradient-to-br from-orange to-pink hover:text-white dark:text-white"
-              >
-                <span
-                  class="w-64 px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-full group-hover:bg-opacity-0"
-                >
-                  <a href="#about">A propos de moi</a>
-                </span>
-              </button>
-            </li>
-
-            <li>
-              <button
-                class="w-64 inline-flex items-center justify-center p-0.5 mb-2 me-2 text-lg text-gray-900 rounded-full group bg-gradient-to-br from-orange to-pink hover:text-white dark:text-white"
-              >
-                <span
-                  class="w-64 px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-full group-hover:bg-opacity-0"
-                >
-                  <a href="#projects">Mes projets</a>
-                </span>
-              </button>
-            </li>
-
-            <li>
-              <button
-                class="w-64 inline-flex items-center justify-center p-0.5 mb-2 me-2 text-lg text-gray-900 rounded-full group bg-gradient-to-br from-orange to-pink hover:text-white dark:text-white"
-              >
-                <span
-                  class="w-64 px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-full group-hover:bg-opacity-0"
-                >
-                  <a href="#contact">Contactez-moi!</a>
-                </span>
-              </button>
-            </li>
-          </ul>
-        </nav>
+    
+    <Header></Header>
+    
+    <main class="h-screen w-screen flex flex-col justify-between">
+      <section class="text-center">
+        <div>
+          <h2 class="text-4xl font-bold">Portfolio</h2>
+          <p class="text-lg mt-2">2025</p>
+        </div>
       </section>
+
+      <!-- soleil -->
+        <img src="/sunny.png" class="w-96 scale-150 absolute -top-20 -left-20">
+
+        <!-- moi -->
+        <img
+          class="absolute -bottom-44 -right-20  scale-75 z-0"
+          src="/header-me.png"
+        />
+
+        <!-- rodrigo -->
+        <img
+          class="absolute bottom-96 -right-10 scale-100"
+          src="/header-rodrigo.png"
+        />
+
+      
+       <Nav></Nav>
+
+
+       <!-- SCROLL WORDS -->
+       <section
+         class="bg-gradient-to-br from-orange to-pink py-12 flex justify-center items-center"
+       >
+         <div class="whitespace-nowrap mx-8">
+           <div class="flex gap-8 LeftToRight mt-4">
+             <p class="text-5xl font-bold text-white">
+               Let's work together! Let’s work together!
+             </p>
+           </div>
+         </div>
+       </section>
 
       <!-- -------------------------- DEFILER -->
-      <section
-        class="bg-gradient-to-br from-orange to-pink py-6 flex justify-center items-center"
-      >
-        <div class="whitespace-nowrap mx-8">
-          <div class="flex gap-8 LeftToRight mt-4">
-            <p class="text-5xl font-bold text-white">
-              Let's work together! Let’s work together!
-            </p>
-          </div>
-        </div>
-      </section>
     </main>
 
-    <!-- -------------------------- A PROPOS DE MOI -->
-    <section id="about" class="py-80">
-      <div
-        class="max-w-4xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-8"
-      >
-        <!-- Text -->
-        <div class="md:w-1/2">
-          <h2 class="text-3xl font-bold">Hello!</h2>
-          <p class="mt-4">
-            Je m’appelle Aysha Braybrooke, j’ai 20ans et j’habite en France.
-          </p>
-          <p class="mt-4 text-gray-600">
-            Je suis dans ma 3ème année de BUT Métiers du Multimédia et de
-            l'Internet à Limoges dans le parcours Création Numérique.
-          </p>
-          <p class="mt-4 text-gray-600">
-            Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
-            Nulla consequat massa quis enim. Donec pede justo, fringilla vel,
-            aliquet nec, vulputate eget, arcu.
-          </p>
-          <a
-            href="/fonts/Aysha_Braybrooke_CV.pdf"
-            class="mt-4 inline-block underline bg-gradient-to-r from-orange to-pink text-transparent bg-clip-text"
-            >téléchargez mon CV</a
-          >
-        </div>
 
-        <div class="md:w-1/2 flex justify-center relative">
-          <div
-            class="w-56 h-80 scale-125 bg-gray-200 rounded-full flex items-center justify-center relative">
-          
-            <span>
-              <img src="fonts/ai-aboutme.svg" class="absolute -left-3 top-36 -rotate-12 w-16 "></span
-            >
-            <span
-              class="absolute bottom-4 right-4 bg-black text-white text-sm px-2 py-1 rounded"
-              >Ps</span
-            >
-
-          </div>
-          <img src="fonts/about-me-pic.png" class="w-96 scale-150 absolute">
-        </div>
-      </div>
-    </section>
-
-    <!-- -------------------------- PROJETS -->
-  
-
-    <section id="projects" class="py-16">
-      <h2 class="text-3xl font-bold text-center mb-8">Mes Projets</h2>
-      <div class="flex gap-5 justify-center">
-        <button class="dot w-64 inline-flex items-center justify-center p-0.5 mb-2 me-2 text-lg text-gray-900 rounded-full group bg-gradient-to-br from-orange to-pink hover:text-white dark:text-white" data-slide="0"
-        >
-        <span class="w-64 px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-full group-hover:bg-opacity-0">
-      Dessins graphiques</button>
-
-
-
-        <button class="dot w-64 inline-flex items-center justify-center p-0.5 mb-2 me-2 text-lg text-gray-900 rounded-full group bg-gradient-to-br from-orange to-pink hover:text-white dark:text-white" data-slide="1"
-        > 
-        <span class="w-64 px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-full group-hover:bg-opacity-0"> Motion Design</button>
-
-
-        <button class="dot w-64 inline-flex items-center justify-center p-0.5 mb-2 me-2 text-lg text-gray-900 rounded-full group bg-gradient-to-br from-orange to-pink hover:text-white dark:text-white" data-slide="2"
-        > 
-        <span class="w-64 px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-full group-hover:bg-opacity-0"> UI/UX Design</button>
-
-    
-        <button class="dot w-64 inline-flex items-center justify-center p-0.5 mb-2 me-2 text-lg text-gray-900 rounded-full group bg-gradient-to-br from-orange to-pink hover:text-white dark:text-white" data-slide="3"
-        > 
-        <span class="w-64 px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-full group-hover:bg-opacity-0"> Identité Visuelle</button>
-
-
-        <button class="dot w-64 inline-flex items-center justify-center p-0.5 mb-2 me-2 text-lg text-gray-900 rounded-full group bg-gradient-to-br from-orange to-pink hover:text-white dark:text-white" data-slide="4"
-        > 
-        <span class="w-64 px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-full group-hover:bg-opacity-0"> Réseaux Sociaux</button>
-
-        <button class="dot w-64 inline-flex items-center justify-center p-0.5 mb-2 me-2 text-lg text-gray-900 rounded-full group bg-gradient-to-br from-orange to-pink hover:text-white dark:text-white" data-slide="4"
-        > 
-        <span class="w-64 px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-full group-hover:bg-opacity-0"> Jeu en Ligne</button>
-
-        
-        
-
-      </div>
-
-
-      <div class="relative overflow-hidden">
-        <!-- Carousel Wrapper -->
-        <div
-          id="carousel"
-          class="flex transition-transform duration-500 ease-in-out"
-        >
-          <!-- Slide 1 -->
-          <div
-
-          
-            class="min-w-full px-52 py-16 flex items-center justify-center"
-          >
-          <div class="">
-            <!-- Gallery Container -->
-            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5">
-              <!-- Image 1 -->
-              <div class="overflow-hidden rounded-lg shadow-md">
-                <img src="fonts/dessin_01.png" alt="Image 1" class="w-80 h-auto object-cover">
-              </div>
-              <!-- Image 2 -->
-              <div class="overflow-hidden rounded-lg shadow-md">
-                <img src="fonts/dessin_03.png" alt="Image 2" class="w-80 h-auto object-cover">
-              </div>
-              <!-- Image 3 -->
-              <div class="overflow-hidden rounded-lg shadow-md">
-                <img src="fonts/dessin_07.png" alt="Image 3" class="w-80 h-auto object-cover">
-              </div>
-              <!-- Image 4 -->
-              <div class="overflow-hidden rounded-lg shadow-md">
-                <img src="fonts/dessin_04.png" alt="Image 4" class="w-80 h-auto object-cover">
-              </div>
-              <!-- Image 5 -->
-              <div class="overflow-hidden rounded-lg shadow-md">
-                <img src="fonts/dessin_05.png" alt="Image 5" class="w-80 h-auto object-cover">
-              </div>
-              <!-- Image 6 -->
-              <div class="overflow-hidden rounded-lg shadow-md">
-                <img src="fonts/dessin_08.png" alt="Image 6" class="w-80 h-auto object-cover">
-              </div>
-              <div class="overflow-hidden rounded-lg shadow-md">
-                <img src="fonts/dessin_06.png" alt="Image 6" class="w-80 h-auto object-cover">
-              </div>
-
-              <div class="overflow-hidden rounded-lg shadow-md">
-                <img src="fonts/dessin_10.png" alt="Image 6" class="w-80 h-auto object-cover">
-              </div>
-            </div>
-          </div>
-          </div>
-
-
-
-
-          <!-- Slide 2  MOTION DESIGGGGNN-->
-          <div
-            class="min-w-full flex flex-col justify-center px-60 ">
-
-            <h2 class="text-3xl font-bold  mb-8">Vidéo informative sur la gouvernance partagée</h2>
-
-            <div class="flex flex-row">
-              <div class="w-96 p-4">
-                <video 
-                  controls>
-                  <source src="/fonts/BRAYBROOKEAysha-LICA.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-  
-  
-              <div>
-  
-                <p class="w-96">Dans le cadre d’un projet fictif réalisé en milieu scolaire, j’ai conçu une vidéo au format réseaux sociaux. Ce projet intégrait du motion design et des séquences face caméra. Le client était le LICA (Laboratoire d'Intelligence Collective et Artificielle), une structure scientifique spécialisée dans l’intelligence collective, l’innovation sociale et l’intelligence artificielle.</p>
-                <div class="flex flex-row gap-2 py-5">
-                  <img src="/fonts/logo-ae.svg" class="w-16">
-                  <img src="/fonts/logo-pr.svg" class="w-16">
-                  <img src="/fonts/logo-cam.svg" class="w-16">
-                </p>
-                </div>
-
-
-                
-              </div>
-            </div>
-            
-            <h2 class="text-3xl font-bold  mb-8">Animations émotions chat</h2>
-          </div>
-          <!-- Slide 3 -->
-          <div
-            class="min-w-full h-96 bg-red-500 flex items-center justify-center text-white"
-          >
-            <h2 class="text-2xl font-bold">Project 3</h2>
-          </div>
-          <!-- Slide 4 MYSTIC BREWSSSSSSS-->
-          <div
-            class="min-w-full flex items-center justify-center"
-          >
-          <img src="fonts/id_visu01.png" class="scale-50">
-
-
-          </div>
-          <!-- Slide 5 -->
-          <div
-            class="min-w-full h-64 bg-yellow-500 flex items-center justify-center text-white"
-          >
-            <h2 class="text-2xl font-bold">Project 5</h2>
-          </div>
-        </div>
-
-        <!-- Navigation Dots -->
-
-      </div>
-
-    </section>
-
-    <!-- -------------------------- CONTACT -->
-    <section id="contact" class="py-28">
-      <h2 class="text-3xl font-bold text-center mb-8">Contactez-moi!</h2>
-      <div class="flex flex-wrap gap-4 justify-center text-white">
-        <!-- Email Card -->
-        <div
-          class="h-52 w-64 rounded-lg p-4 text-center bg-gradient-to-br from-orange to-pink flex flex-col justify-between group transition-transform duration-300 ease-in-out hover:scale-105"
-        >
-          <img
-            src="/fonts/logo_mail.png"
-            class="w-8 transition-transform duration-300 ease-in-out group-hover:scale-150"
-          />
-          <p class="border-t-2 border-white pt-2">aysha.braybr00ke@gmail.com</p>
-        </div>
-
-        <!-- LinkedIn Card -->
-        <a href="https://www.linkedin.com/in/aysha-braybrooke/" target="_blank">
-          <div
-            class="h-52 w-64 bg-gradient-to-br from-orange to-pink rounded-lg p-4 text-center flex flex-col justify-between group transition-transform duration-300 ease-in-out hover:scale-105"
-          >
-            <img
-              src="/fonts/logo_linkedin.png"
-              class="w-8 transition-transform duration-300 ease-in-out group-hover:scale-150"
-            />
-            <p class="border-t-2 border-white pt-2">ayshabraybrooke</p>
-          </div>
-        </a>
-
-        <!-- Behance Card -->
-        <a href="https://www.behance.net/ayshabraybrooke" target="_blank">
-          <div
-            class="h-52 w-64 bg-gradient-to-br from-orange to-pink rounded-lg p-4 text-center flex flex-col justify-between group transition-transform duration-300 ease-in-out hover:scale-105"
-          >
-            <img
-              src="/fonts/logo_behance.png"
-              class="w-8 transition-transform duration-300 ease-in-out group-hover:scale-150"
-            />
-            <p class="border-t-2 border-white pt-2">ayshabraybrooke</p>
-          </div>
-        </a>
-
-        <!-- TikTok Card -->
-        <a href="https://www.tiktok.com/@beebpoup" target="_blank">
-          <div
-            class="h-52 w-64 bg-gradient-to-br from-orange to-pink rounded-lg p-4 text-center flex flex-col justify-between group transition-transform duration-300 ease-in-out hover:scale-105"
-          >
-            <img
-              src="/fonts/logo_tiktok.png"
-              class="w-8 transition-transform duration-300 ease-in-out group-hover:scale-150"
-            />
-            <p class="border-t-2 border-white pt-2">@beebpoup</p>
-          </div>
-        </a>
-      </div>
-    </section>
-
-    <script>
-     import "../script";
-    </script>
   </body>
 </html>

@@ -1,0 +1,62 @@
+---
+import Nav from "../components/Nav.astro";
+import Header from "../components/Header.astro"
+
+---
+<Header></Header>
+
+<div class="flex justify-center items-center align-middle h-screen">
+    <Nav></Nav>
+
+
+
+    <section>
+        <div
+          class="max-w-4xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-8"
+        >
+          <!-- Text -->
+          <div class="md:w-1/2">
+            <h2 class="text-3xl font-bold">Hello!</h2>
+            <p class="mt-4">
+              Je m’appelle Aysha Braybrooke, j’ai 20ans et j’habite en France.
+            </p>
+            <p class="mt-4 text-gray-600">
+              Je suis dans ma 3ème année de BUT Métiers du Multimédia et de
+              l'Internet à Limoges dans le parcours Création Numérique.
+            </p>
+            <p class="mt-4 text-gray-600">
+              Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+              Nulla consequat massa quis enim. Donec pede justo, fringilla vel,
+              aliquet nec, vulputate eget, arcu.
+            </p>
+            <a
+              href="
+              /Aysha_Braybrooke_CV.pdf"
+              class="mt-4 inline-block underline bg-gradient-to-r from-orange to-pink text-transparent bg-clip-text"
+              >téléchargez mon CV</a
+            >
+          </div>
+    
+          <div class="md:w-1/2 flex justify-center relative">
+            <div
+              class="w-56 h-80 scale-125 bg-gray-200 rounded-full flex items-center justify-center relative">
+            
+              <span>
+                <img src="
+                /ai-aboutme.svg" class="absolute -left-3 top-36 -rotate-12 w-16 "></span
+              >
+              <span
+                class="absolute bottom-4 right-4 bg-black text-white text-sm px-2 py-1 rounded"
+                >Ps</span
+              >
+    
+            </div>
+            <img src="
+            /about-me-pic.png" class="w-96 scale-150 absolute z-10">
+
+            <img src="/flag_uk.png" class="absolute rotate-45 scale-50 left-44">
+        </div>
+        </div>
+      </section>
+</div>
+
