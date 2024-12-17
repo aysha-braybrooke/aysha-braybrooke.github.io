@@ -59,11 +59,11 @@ const posts = (await getCollection('blog')).sort(
   <body>
     <Header />
 	
-    <main class="flex h-screen">
-      <Nav></Nav>
+    <Nav></Nav>
+    <main class="absolute h-screen -right-96">
       <section class="w-screen relative">
         <!-- Horizontal Scrollable Wrapper -->
-        <div class="w-screen overflow-x-auto whitespace-nowrap relative">
+        <div class="w-screen overflow-x-auto whitespace-nowrap relative ml-[600px]">
           <!-- Flex Container -->
           <ul class="flex flex-nowrap gap-5 scrollable-hover">
             <!-- Dynamically Rendered Posts -->
