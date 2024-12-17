@@ -13,9 +13,9 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 <html lang="en">
 	<head>
 		<BaseHead title={title} description={description} />
-		<style>
+		<!-- <style>
 			main {
-				width: calc(100% - 2em);
+				width:100vw;
 				max-width: 100%;
 				margin: 0;
 			}
@@ -29,7 +29,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				box-shadow: var(--box-shadow);
 			}
 			.prose {
-				width: 720px;
+				width: 80vw;
 				max-width: calc(100% - 2em);
 				margin: auto;
 				padding: 1em;
@@ -51,14 +51,14 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 			.last-updated-on {
 				font-style: italic;
 			}
-		</style>
+		</style> -->
 	</head>
 
 	<body>
 		<Header />
-		<main>
-			<article>
-				<div class="hero-image">
+		<main class="w-screen flex flex-col p-16">
+			<!-- <article> -->
+				<!-- <div class="hero-image">
 					{heroImage && <img width={510} height={510} src={heroImage} alt="" />}
 				</div>
 				<div class="prose">
@@ -72,13 +72,13 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 									</div>
 								)
 							}
-						</div>
+						</div> -->
 						<h1>{title}</h1>
-						<hr />
-					</div>
+						<!-- <hr />
+					</div> -->
 					<slot />
-				</div>
-			</article>
+				<!-- </div> -->
+			<!-- </article> -->
 		</main>
 		<Footer />
 	</body>
