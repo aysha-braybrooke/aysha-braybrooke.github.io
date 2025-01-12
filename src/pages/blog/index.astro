@@ -41,7 +41,7 @@ const posts = (await getCollection('blog')).sort(
       }
 
       li {
-        width: 800px;
+        width: 500px;
       }
 
       /* Custom Scrollable Area */
@@ -59,8 +59,59 @@ const posts = (await getCollection('blog')).sort(
   <body>
     <Header />
 	
-    <Nav></Nav>
-    <main class="absolute h-screen -right-96">
+    
+  <!-- NAV !!!!!!!!!!!!!!!!!!!!! -->
+  <nav
+  class="font-dm-sans mt-8 items-center align-middle p-52 absolute top-1/2 left-1/4 -translate-x-1/3 -translate-y-1/2 z-50"
+>
+  <ul class="flex flex-col gap-4 items-center">
+    <li>
+      <button
+        class="w-64 inline-flex items-center justify-center p-0.5 mb-2 me-2 text-lg text-gray-900 rounded-full group bg-gradient-to-br from-orange to-pink hover:text-white"
+      >
+        <span
+          class="w-64 px-5 py-2.5 transition-all ease-in duration-75 bg-white rounded-full group-hover:bg-opacity-0"
+        >
+          <a href="/">Accueil</a>
+        </span>
+      </button>
+    </li>
+
+    <li>
+      <button
+        class="w-64 inline-flex items-center justify-center p-0.5 mb-2 me-2 text-lg text-gray-900 rounded-full group bg-gradient-to-br from-orange to-pink hover:text-white"
+      >
+        <span
+          class="w-64 px-5 py-2.5 transition-all ease-in duration-75 bg-white rounded-full group-hover:bg-opacity-0"
+        >
+          <a href="/blog">Mes projets</a>
+        </span>
+      </button>
+    </li>
+
+    <li>
+      <button
+        class="w-64 inline-flex items-center justify-center p-0.5 mb-2 me-2 text-lg text-gray-900 rounded-full group bg-gradient-to-br from-orange to-pink hover:text-white"
+      >
+        <span
+          class="w-64 px-5 py-2.5 transition-all ease-in duration-75 bg-white rounded-full group-hover:bg-opacity-0"
+        >
+          <a href="/about">A propos de moi</a>
+        </span>
+      </button>
+    </li>
+  </ul>
+</nav>
+
+
+
+
+
+
+
+
+
+    <main class="absolute h-screen -right-96 lg:-right-28">
       <section class="w-screen relative">
         <!-- Horizontal Scrollable Wrapper -->
         <div class="w-screen overflow-x-auto whitespace-nowrap relative ml-[600px]">

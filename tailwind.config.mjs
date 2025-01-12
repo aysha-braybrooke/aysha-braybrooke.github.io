@@ -18,6 +18,7 @@ export default {
 				"orange": "#FCAE48",
 				"bleu": "#90D4FF",
 				"pink": "#FFA3C5",
+				"orange-clair":"#ffebd6"
 			},
 			keyframes: {
 				typing: {
