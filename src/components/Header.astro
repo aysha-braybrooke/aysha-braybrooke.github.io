@@ -2,10 +2,38 @@
 
 ---
 
-<header class=" absolute w-screen">
-  <div class="flex flex-col items-end justify-self-end font-dm-sans text-gray-800 text-lg font-bold px-8">
-    <h1>Aysha Braybrooke</h1>
-    <p>Design Graphique • Illustratrice</p>
-  </div>
-  </header>
+<style>
+  @keyframes slideDown {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
 
+  /* Apply custom animation */
+  .animate-slide-down {
+    animation: slideDown 1s ease-out forwards;
+  }
+</style>
+
+<header class="absolute w-screen z-10">
+  <div
+    class="flex gap-5 justify-center items-center ml-52 mr-52 mt-12 h-32 rounded-full bg-pink font-dm-sans font-bold animate-slide-down"
+  >
+    <a href="/about">
+      <button class="bg-white hover:bg-green hover:text-white rounded-full h-16 w-52">ABOUT ME</button>
+    </a>
+
+    <a href="/about">
+      <button class="bg-white rounded-full h-16 w-52">MY PROJECTS</button>
+    </a>
+
+    <a href="/about">
+      <button class="bg-white rounded-full h-16 w-52">CONTACT ME</button>
+    </a>
+  </div>
+</header>

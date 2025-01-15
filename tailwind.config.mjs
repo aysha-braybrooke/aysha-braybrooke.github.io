@@ -17,8 +17,8 @@ export default {
 			colors: {
 				"orange": "#FCAE48",
 				"bleu": "#90D4FF",
-				"pink": "#FFA3C5",
-				"orange-clair":"#ffebd6"
+				"pink": "#E7276B",
+				"green":"#CDD528",
 			},
 			keyframes: {
 				typing: {
@@ -40,7 +40,8 @@ export default {
 				}
 			  },
 			  animation: {
-				typing: "typing 2s steps(20) infinite alternate, blink .7s infinite"
+				typing: "typing 2s steps(20) infinite alternate, blink .7s infinite",
+				'spin-slow': 'spin 10s linear infinite'
 			  }
 			
 		},
