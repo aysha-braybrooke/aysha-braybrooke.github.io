@@ -1,150 +1,60 @@
 ---
-import BaseHead from '../../components/BaseHead.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
-import { getCollection } from 'astro:content';
+import BaseHead from "../../components/BaseHead.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
+import { getCollection } from "astro:content";
 // import FormattedDate from '../../components/FormattedDate.astro';
 // import Nav from "../../components/Nav.astro";
 
-const posts = (await getCollection('blog')).sort(
-	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+const posts = (await getCollection("blog")).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 ---
-<!doctype html>
-<html lang="en">
-  <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-    <style>
-      /* Prevent horizontal scrolling on the body */
-      html, body {
-        overflow-x: hidden; /* Disables horizontal scrolling on the entire page */
-        margin: 0;
-        padding: 0;
-        height: 100%;
-      }
 
-      main {
-        width: 100vw;
-        display: flex;
-        justify-items: center;
-        align-items: center;
-        overflow-x: hidden; /* Prevent horizontal scrolling within the main element */
-      }
+<meta charset="UTF-8" />
+<Header />
 
-      ul li a:hover h4,
-      ul li a:hover .date {
-        color: rgb(var(--accent));
-      }
-      ul a:hover img {
-        box-shadow: var(--box-shadow);
-      }
+<main class="font-dm-sans w-screen pl-16 pr-16 flex justify-center items-center">
+  <section class="flex flex-wrap justify-center items-center gap-5 pt-36">
+    <!-- ONE BUTTON!!!!!!!!!!!!! -->
 
-      li {
-        width: 500px;
-      }
-
-      /* Custom Scrollable Area */
-      .scrollable::-webkit-scrollbar {
-        display: none; /* Hide scrollbar */
-      }
-
-      .scrollable {
-        scrollbar-width: none; /* Hide scrollbar */
-        overflow-x: auto; /* Allow horizontal scrolling */
-        overflow-y: hidden; /* Disable vertical scrolling */
-      }
-    </style>
-  </head>
-  <body>
-    <Header />
-	
-    
-  <!-- NAV !!!!!!!!!!!!!!!!!!!!! -->
-  <nav
-  class="font-dm-sans mt-8 items-center align-middle p-52 absolute top-1/2 left-1/4 -translate-x-1/3 -translate-y-1/2 z-50"
->
-  <ul class="flex flex-col gap-4 items-center">
-    <li>
-      <button
-        class="w-64 inline-flex items-center justify-center p-0.5 mb-2 me-2 text-lg text-gray-900 rounded-full group bg-gradient-to-br from-orange to-pink hover:text-white"
-      >
-        <span
-          class="w-64 px-5 py-2.5 transition-all ease-in duration-75 bg-white rounded-full group-hover:bg-opacity-0"
-        >
-          <a href="/">Accueil</a>
-        </span>
-      </button>
-    </li>
-
-    <li>
-      <button
-        class="w-64 inline-flex items-center justify-center p-0.5 mb-2 me-2 text-lg text-gray-900 rounded-full group bg-gradient-to-br from-orange to-pink hover:text-white"
-      >
-        <span
-          class="w-64 px-5 py-2.5 transition-all ease-in duration-75 bg-white rounded-full group-hover:bg-opacity-0"
-        >
-          <a href="/blog">Mes projets</a>
-        </span>
-      </button>
-    </li>
-
-    <li>
-      <button
-        class="w-64 inline-flex items-center justify-center p-0.5 mb-2 me-2 text-lg text-gray-900 rounded-full group bg-gradient-to-br from-orange to-pink hover:text-white"
-      >
-        <span
-          class="w-64 px-5 py-2.5 transition-all ease-in duration-75 bg-white rounded-full group-hover:bg-opacity-0"
-        >
-          <a href="/about">A propos de moi</a>
-        </span>
-      </button>
-    </li>
-  </ul>
-</nav>
-
-
-
-
-
-
-
-
-
-    <main class="absolute h-screen -right-96 lg:-right-28 font-dm-sans">
-      <section class="w-screen relative">
-        <!-- Horizontal Scrollable Wrapper -->
-        <div class="w-screen overflow-x-auto whitespace-nowrap relative ml-[600px]">
-          <!-- Flex Container -->
-          <ul class="flex flex-nowrap gap-5 scrollable-hover">
-            <!-- Dynamically Rendered Posts -->
-            {
-              posts.map((post) => (
-                <div class="relative group">
-                  <a href={`/blog/${post.id}/`} class="block text-center">
-                    <li class="">
-                      <img
-                        src={post.data.heroImage}
-                        alt={post.data.title}
-                        class="rounded-lg object-cover transition-transform duration-300 ease-in-out"
-                      />
-                    </li>
-
-                    <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-orange to-pink opacity-0 group-hover:opacity-100 transition-opacity rounded-lg flex justify-center items-center align-middle">                     
-                      <h4 class="title text-4xl font-bold text-white">{post.data.title}</h4>
-                    </div>
-                  </a>
+    {
+      posts.map((post) => (
+        <div class="relative group">
+                           {" "}
+          <a href={`/blog/${post.id}/`} class="block text-center">
+                               {" "}
+            <li class="list-none">
+                                   {" "}
+              <div class="da relative flex  flex-col justify-center overflow-hidden">
+                <div class="" />
+                <div class="group relative m-0 flex h-72 w-96 rounded-xl  ring-gray-900/5 sm:mx-auto sm:max-w-lg">
+                  <div class="z-10 h-full w-full overflow-hidden rounded-xl border opacity-80 transition duration-300 ease-in-out group-hover:opacity-100">
+                    <img
+                      src={post.data.heroImage}
+                      class="animate-fade-in block h-full w-full scale-100 transform object-cover object-center opacity-100 transition duration-300 group-hover:scale-110"
+                      alt=""
+                    />
+                  </div>
+                  <div class="absolute bottom-0 z-20 m-0 pb-4 ps-4 transition duration-300 ease-in-out group-hover:-translate-y-1 group-hover:translate-x-3 group-hover:scale-110">
+                    <h1 class="text-2xl font-bold text-white">
+                      {post.data.title}
+                    </h1>
+                  </div>
                 </div>
-              ))
-            }
-          </ul>
+              </div>
+                                 {" "}
+            </li>
+                                                                        {" "}
+            <h4 class="title text-4xl font-bold text-white">
+              {post.data.title}
+            </h4>
+                             {" "}
+          </a>
+                         {" "}
         </div>
-      </section>
-	  
-      <!-- Fixed Gradient Overlay -->
-      <div class="pointer-events-none absolute top-0 right-0 bottom-0 w-32 bg-gradient-to-l from-white to-transparent"></div>
-    </main>
-
-    <Footer />
-  </body>
-</html>
+      ))
+    }
+  </section>
+</main>

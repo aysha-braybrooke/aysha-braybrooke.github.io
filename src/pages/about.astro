@@ -4,54 +4,93 @@ import Header from "../components/Header.astro";
 ---
 
 <meta charset="UTF-8" />
+<head>
+  <script
+    src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"
+    defer></script>
+    
+</head>
 <Header />
 
-<div
-  class="max-w-4xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-8 pt-16 pl-44 absolute font-dm-sans"
->
-  <!-- Text -->
-  <div class="w-max">
-    <h1
-      class="animate-typing overflow-hidden whitespace-nowrap border-r-4 text-9xl text-pink font-bold"
+<main class="flex justify-center items-center">
+  
+  <div class="flex flex-col">
+    <section class="w-screen h-screen flex flex-row justify-center items-center">
+      
+      <div class="flex flex-row items-center">
+        <lottie-player
+        src="/aboutme-intro.json"
+        class="w-96 h-96"
+        background="transparent"
+        speed="1"
+        autoplay
+        >
+      </lottie-player>
+
+      <div class="relative">
+        <img src="/aboutme-pic.png" class=" w-96 scale-110  z-10 relative">
+      </div>
+      <img 
+      src="starpink.png" 
+      alt="Spinning Image"
+      class="absolute right-60 bottom-36 h-52 w-52 animate-spin-slow z-0"
     >
-      Hello!
-    </h1>
-  </div>
-</div>
+      </div>
+  
+    </section>
+    
+    
+    <!-- MMI!!!!!!!!!!!!!!!!!!!!!!! -->
+    <section class=" w-screen bg-pink justify-center items-center p-36">
+      <div class="flex flex-row items-center justify-between">
+        <div class="w-2/3 text-3xl font-dm-sans font-bold flex flex-col text-white gap-5">
+          <p >Je suis en 3ème année du BUT MMI à l’IUT du Limousin. </p>
+          <p>Chaque jour, j'utilise les logiciels de la suite Adobe pour créer des affiches, des montages vidéo, des identités visuelles, et bien plus encore.</p>            
+        </div>
+        <lottie-player
+        src="/aboutme-mmi.json"
+        class="scale-75"
+        background="transparent"
+        speed="1"
+        loop
+        autoplay
+        >
+      </lottie-player>
 
-<div class="flex justify-center items-center align-middle h-screen">
-
-  </div>
-
-
-
-
-
-
-
-  <div class="bg-pink p-40 text-white font-dm-sans flex flex-col gap-10">
-
-    <section class="">
-      <p class="mt-4 text-xl font-bold">
-        Je m’appelle Aysha Braybrooke.
-      </p>
-      <p class="mt-4 ">
-        J'ai 20 ans et je suis en 3e année de BUT Métiers du Multimédia et de l'Internet (MMI) à Limoges, dans le parcours Création Numérique.
-      </p>
-      <p class="mt-4">
-      Dans mon temps libre, je passe beaucoup de temps a réaliser des dessins numériques! 
-      </p>
-      <a
-        href="
-                /Aysha_Braybrooke_CV.pdf"
-        class="mt-4 inline-block underline "
-        >téléchargez mon CV</a
-      >
-
+      </div>
       
     </section>
-  
-    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0VaeksJaXy5R1nvcTMh3Xk?utm_source=generator&theme=0" width="100%" height="152" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-  </div>
 
 
+
+
+    <!-- CE QUE J'AIME!!!!!!!!!!!!!!!!!!!!!!! -->
+    <section class=" w-screen bg-green justify-center items-center p-36">
+      <div class="flex flex-row items-center justify-between">
+        <div class="w-2/3  font-dm-sans font-bold flex flex-col text-white gap-5">
+          <p class="text-6xl">Dans mon temps libre j'aime... </p>
+              
+        </div>
+        <!-- <lottie-player
+        src="/aboutme-mmi.json"
+        class="scale-75"
+        background="transparent"
+        speed="1"
+        loop
+        autoplay
+        >
+      </lottie-player> -->
+
+    </div>
+<div class="flex flex-col gap-5">
+  <p class="uppercase font-dm-sans text-white font-bold text-xl">j'écoute beaucoup de musiques</p>        
+  <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5iwUwADk4uQUvgMF6PlTRl?utm_source=generator" width="50%" height="150"  allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    
+</div>
+    
+    </section>
+
+
+  </div>  
+
+</main>

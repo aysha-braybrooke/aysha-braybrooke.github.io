@@ -2,7 +2,7 @@
 title: 'Dessins Graphiques'
 description: 'Lorem ipsum dolor sit amet'
 pubDate: 'Jul 15 2024'
-heroImage: '../dessin_11.png'
+heroImage: '../dessin_13.png'
 ---
 <div class="px-4 py-6">
   <!-- Gallery Container -->
